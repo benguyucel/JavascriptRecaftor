@@ -1,9 +1,7 @@
-import { ErrorResult } from "../crossCuttingConcerns/logging/errorDataResult.js";
 import EmployeeValidator from "../crossCuttingConcerns/validation/employeeValidator.js";
 import {
     users
 } from "../data/users.js";
-import DataError from "../models/dataError.js";
 export default class EmployeeService {
     constructor() {
 
@@ -18,9 +16,7 @@ export default class EmployeeService {
     add(entity) {
         let employeeValidator = new EmployeeValidator;
         if (!employeeValidator.validate(entity)) {
-            this.employee.push(entity)
-            console.log(employeeValidator.getResult())
-            
+            this.employee.push(entity)           
         }
     }
     getById(id) {
