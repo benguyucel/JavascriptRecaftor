@@ -4,7 +4,6 @@ export default class CustomerValidator {
     constructor() {
         this.validatorMenager = new ValidationMenager
         this.errors = []
-        this.validateArr = [];
     }
     validate(user) {
         let hasError = false
