@@ -15,7 +15,6 @@ export default class CustomerService {
         let customerValidator = new CustomerValidator;
         if (!customerValidator.validate(entity)) {
             this.customers.push(entity)
-            console.log(customerValidator.getResult())
             
         }
     }
